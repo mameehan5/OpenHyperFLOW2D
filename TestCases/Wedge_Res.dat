@@ -1,7 +1,7 @@
 set view 0, 0, 1
 set nosurface
 #set contour
-set data style lines
+set style data lines
 set grid
 set pm3d
 
