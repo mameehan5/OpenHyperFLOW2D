@@ -63,6 +63,7 @@ all: $(TARGET)
 .SUFFIXES: .cpp  .c
 	
 .cpp.o:
+	$(CXXC) -c $(INCPATH) $(CXXOPTIONS) $(CFLAGS) $< -o $@; ar -r $(TARGET_2D) $@;
 	@if [  ! -a $(TARGET_2D)  ];\
 	then echo $(CXXC) -c $(INCPATH) $(CXXOPTIONS) $(CFLAGS) $< -o $@;\
         $(CXXC) -c $(INCPATH) $(CXXOPTIONS) $(CFLAGS) $< -o $@; ar -r $(TARGET_2D) $@;\
